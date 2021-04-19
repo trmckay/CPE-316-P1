@@ -29,7 +29,7 @@ char _read_keypad() {
     return 0;
 }
 
-uint8_t read_keypad_blking() {
+char read_keypad_blking() {
     char ch = 0;
     while (ch != 0) {
         _read_keypad();
@@ -37,6 +37,6 @@ uint8_t read_keypad_blking() {
     return ch;
 }
 
-uint8_t read_keypad_non_blking() {
+char read_keypad_non_blking() {
     return _read_keypad();
 }

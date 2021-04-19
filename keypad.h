@@ -14,7 +14,7 @@ static char KEYPAD_CHARS[12] = {'1', '2', '3', '4', '5', '6',
                                 '7', '8', '9', '*', '0', '#'};
 
 void keypad_cfg();
-uint8_t read_keypad();
-uint8_t read_keypad_non_blking();
+char read_keypad_non_blking();
+char read_keypad_blking();
 
 #endif
