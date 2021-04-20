@@ -2,7 +2,6 @@
 #define _KEYPAD_H
 
 #include "msp.h"
-#include "util.h"
 
 // KEYPAD_PORT.0 - KEYPAD_PORT.7 must be free.
 #define KEYPAD_PORT P4

@@ -1,6 +1,7 @@
 #include "dco.h"
 #include "keypad.h"
 #include "lcd.h"
+#include "lock.h"
 
 /* WARNING:
  * DO NOT FORGET TO NULL-TERMINATE STRINGS
@@ -75,6 +76,7 @@ void main(void) {
 
             cbuf[i] = cchar;
             write_char_LCD(cchar);
+            delay_s(1);
         }
 
         // Check user pin against correct pin.
@@ -82,7 +84,8 @@ void main(void) {
             home_LCD();
             clear_LCD();
             write_string_LCD("UNLOCKED");
-            while (1)
+
+            while (read_keypad_blking() != '*')
                 ;
         }
     }
