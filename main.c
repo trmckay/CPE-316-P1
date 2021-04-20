@@ -59,13 +59,13 @@ void main(void) {
 
     char cchar = 0;
     uint8_t i = 0;
-
     char cbuf[PIN_LENGTH];
-    for (int j = 0; j < PIN_LENGTH; j++) {
-        cbuf[j] = 0;
-    }
 
     while (1) {
+        for (int j = 0; j < PIN_LENGTH; j++) {
+            cbuf[j] = 0;
+        }
+
         home_LCD();
         clear_LCD();
         write_string_LCD("LOCKED\nENTER KEY:");
@@ -76,6 +76,10 @@ void main(void) {
 
             cbuf[i] = cchar;
             write_char_LCD(cchar);
+
+            if (cchar == '*')
+                break;
+
             delay_s(1);
         }
 

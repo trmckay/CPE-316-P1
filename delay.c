@@ -1,6 +1,6 @@
 #include "delay.h"
 
-void delay_us(uint16_t us) { // minimum range: 10 us
+void delay_us(uint16_t us) {  // minimum range: 10 us
     uint16_t i;
     uint32_t iters;
 
@@ -13,7 +13,7 @@ void delay_us(uint16_t us) { // minimum range: 10 us
     }
 }
 
-void delay_ms(uint16_t ms) { // range: 1 ms to 99 ms at 3 MHZ
+void delay_ms(uint16_t ms) {  // range: 1 ms to 99 ms at 3 MHZ
     uint16_t i;
     uint32_t iters;
 
@@ -26,7 +26,7 @@ void delay_ms(uint16_t ms) { // range: 1 ms to 99 ms at 3 MHZ
     }
 }
 
-void delay_s(uint16_t s) { // range: 1 s minimum
+void delay_s(uint16_t s) {  // range: 1 s minimum
     uint16_t i;
     uint32_t iters;
 

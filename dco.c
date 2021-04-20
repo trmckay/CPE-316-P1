@@ -1,9 +1,10 @@
-#include "dco.h"
+nclude "dco.h"
 
-/* set_DCO changes the DCO clock from the default of 3 MHz to the nominal
- * frequency defined above
- */
-void set_DCO(uint32_t FREQ) {
+    /* set_DCO changes the DCO clock from the default of 3 MHz to the nominal
+     * frequency defined above
+     */
+    void
+    set_DCO(uint32_t FREQ) {
     CS->KEY = CS_KEY_VAL;  // unlock CS registers
 
     switch (FREQ) {  // set the DCO based on input FREQ
